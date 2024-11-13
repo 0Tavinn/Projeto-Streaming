@@ -9,6 +9,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![Captura de tela 2024-11-12 143946](https://github.com/user-attachments/assets/dc39838e-b027-48d6-a671-4e1377f92f1a)
 
+![Captura de tela 2024-11-13 113608](https://github.com/user-attachments/assets/9735d261-ec85-4eb8-8cd8-74686de5cd70)
+
 
 ## Development server
 
