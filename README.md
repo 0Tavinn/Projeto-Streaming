@@ -147,7 +147,7 @@ export class TmdbService {
 
 ## Personalização e Expansão
 
-- Este projeto pode ser facilmente expandido para incluir novas funcionalidades, como:
+Este projeto pode ser facilmente expandido para incluir novas funcionalidades, como:
 
 - Pesquisa de Filmes: Adicionar um campo de pesquisa para buscar filmes específicos na API do TMDB.
 
