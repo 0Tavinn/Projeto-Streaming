@@ -29,6 +29,7 @@ npm install -g @angular/cli
 
 ## Estrutura do Projeto
 
+```bash
 ├── src
 │   ├── app
 │   │   ├── services
@@ -40,6 +41,7 @@ npm install -g @angular/cli
 │   │   │       └── movies.component.css   # Estilos do componente
 │   │   └── app.component.html         # Template principal onde os componentes são inseridos
 └── README.md                         # Documentação do projeto
+```
 
 ## Configuração e Instalação
 
@@ -47,27 +49,37 @@ Clone o repositório:
 
 bash
 1. Copiar código
+
+```bash
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
+```
 
-2. Instale as dependências:
+3. Instale as dependências:
 
 bash
 Copiar código
+
+```bash
 npm install
+```
 
 3. Adicione a chave da API do TMDB:
 
 No arquivo tmdb.service.ts, insira sua chave da API onde indicado:
+
+```bash
 typescript
 Copiar código
 private apiKey = 'SUA_CHAVE_API';
+```
 
 4. Execute o servidor de desenvolvimento:
 
-bash
+```bash
 Copiar código
 ng serve
+```
 
 5. Acesse a aplicação: Abra seu navegador e vá para http://localhost:4200.
 
@@ -92,6 +104,7 @@ movies.component.html: Template para exibir a lista de filmes com imagens e info
 
 #Serviço para Consumo da API (tmdb.service.ts)
 
+```bash
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -114,9 +127,11 @@ export class TmdbService {
     return `${this.imageUrl}${path}`;
   }
 }
+```
 
 # Template para Exibição de Filmes (movies.component.html)
 
+```bash
 <div class="bg-gray-900 p-8">
   <h2 class="text-center text-2xl font-bold mb-6 text-white">Filmes Populares</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -133,6 +148,7 @@ export class TmdbService {
     </div>
   </div>
 </div>
+```
 
 ## Personalização e Expansão
 
