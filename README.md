@@ -7,11 +7,15 @@ Este projeto tem como objetivo integrar a API do TMDB (The Movie Database) em um
 
 ## Tecnologias Utilizadas
 
-Angular 17: Framework JavaScript para construção da interface web.
-TailwindCSS: Framework CSS para estilização rápida e eficiente.
-TMDB API: API externa que fornece dados sobre filmes, séries, e celebridades.
-TypeScript: Linguagem usada para tipagem estática, integrada ao Angular.
-HTML e CSS: Estruturação e estilização da interface.
+- Angular 17: Framework JavaScript para construção da interface web.
+  
+- TailwindCSS: Framework CSS para estilização rápida e eficiente.
+  
+- TMDB API: API externa que fornece dados sobre filmes, séries, e celebridades.
+  
+- TypeScript: Linguagem usada para tipagem estática, integrada ao Angular.
+  
+- HTML e CSS: Estruturação e estilização da interface.
 
 ## Pré-requisitos
 
