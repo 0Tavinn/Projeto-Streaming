@@ -27,7 +27,7 @@ Angular CLI instalado globalmente:
 npm install -g @angular/cli
 ```
 
-3.#Chave de API do TMDB#: Crie uma conta no TMDB e obtenha uma chave de API para realizar requisições.
+- Chave de API do TMDB#: Crie uma conta no TMDB e obtenha uma chave de API para realizar requisições.
 
 ## Estrutura do Projeto
 
