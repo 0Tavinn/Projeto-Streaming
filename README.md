@@ -49,7 +49,6 @@ npm install -g @angular/cli
 
 - Clone o repositório:
 
-bash
 1. Copiar código
 
 ```bash
