@@ -30,7 +30,6 @@ export const routes: Routes = [
     },
     {
         path:"**",
-        redirectTo:"dinner",
+        redirectTo:"dinner"
     },
 ];
-
