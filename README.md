@@ -56,7 +56,7 @@ git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
 ```
 
-3. Instale as dependências:
+2. Instale as dependências:
 
 ```bash
 npm install
