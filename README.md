@@ -68,15 +68,12 @@ npm install
 No arquivo `tmdb.service.ts`, insira sua chave da API onde indicado:
 
 ```bash
-typescript
-Copiar código
 private apiKey = 'SUA_CHAVE_API';
 ```
 
 4. Execute o servidor de desenvolvimento:
 
 ```bash
-Copiar código
 ng serve
 ```
 
