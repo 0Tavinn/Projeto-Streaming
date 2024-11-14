@@ -97,7 +97,7 @@ ng serve
 
 ## Exemplo de Código
 
-#Serviço para Consumo da API (`tmdb.service.ts`)
+- Serviço para Consumo da API (`tmdb.service.ts`)
 
 ```bash
 import { Injectable } from '@angular/core';
