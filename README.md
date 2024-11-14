@@ -1,7 +1,5 @@
 # Projeto Facultativo: Integração da API TMDB em uma Tela Web Inicial
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
-
 Este projeto tem como objetivo integrar a API do TMDB (The Movie Database) em uma aplicação web, exibindo informações como título, imagem, data de lançamento, gênero, e avaliação de filmes populares. A ideia principal é desenvolver habilidades de integração com APIs e exibir os dados em uma interface web inicial utilizando tecnologias modernas.
 
 
@@ -21,13 +19,13 @@ Este projeto tem como objetivo integrar a API do TMDB (The Movie Database) em um
 
 Para rodar este projeto, você precisa ter:
 
-Node.js e npm instalados para gerenciamento de dependências e execução de comandos.
+- Node.js e npm instalados para gerenciamento de dependências e execução de comandos.
 
 Angular CLI instalado globalmente:
 
-bash
-Copiar código
+```bash
 npm install -g @angular/cli
+```
 
 3.#Chave de API do TMDB#: Crie uma conta no TMDB e obtenha uma chave de API para realizar requisições.
 
@@ -49,7 +47,7 @@ npm install -g @angular/cli
 
 ## Configuração e Instalação
 
-Clone o repositório:
+- Clone o repositório:
 
 bash
 1. Copiar código
@@ -61,16 +59,13 @@ cd nome-do-repositorio
 
 3. Instale as dependências:
 
-bash
-Copiar código
-
 ```bash
 npm install
 ```
 
 3. Adicione a chave da API do TMDB:
 
-No arquivo tmdb.service.ts, insira sua chave da API onde indicado:
+No arquivo `tmdb.service.ts`, insira sua chave da API onde indicado:
 
 ```bash
 typescript
@@ -85,28 +80,28 @@ Copiar código
 ng serve
 ```
 
-5. Acesse a aplicação: Abra seu navegador e vá para http://localhost:4200.
+5. Acesse a aplicação: Abra seu navegador e vá para `http://localhost:4200`.
 
 
 ## Funcionalidades
 
-Listagem de Filmes Populares: Exibe uma lista de filmes populares recuperados da API do TMDB, incluindo título, imagem, data de lançamento, avaliação, e um breve resumo.
+- Listagem de Filmes Populares: Exibe uma lista de filmes populares recuperados da API do TMDB, incluindo título, imagem, data de lançamento, avaliação, e um breve resumo.
 
-Interface Responsiva: Utilizando TailwindCSS para garantir que a interface seja adaptada para dispositivos móveis e desktops.
+- Interface Responsiva: Utilizando TailwindCSS para garantir que a interface seja adaptada para dispositivos móveis e desktops.
 
-Carregamento Dinâmico: Os dados dos filmes são carregados dinamicamente da API.i) page.
+- Carregamento Dinâmico: Os dados dos filmes são carregados dinamicamente da API page.
 
 ## Componentes e Serviços
 
-tmdb.service.ts: Serviço Angular responsável por fazer chamadas à API do TMDB.
+`mdb.service.ts`: Serviço Angular responsável por fazer chamadas à API do TMDB.
 
-movies.component.ts: Componente Angular que consome o serviço e exibe os dados dos filmes.
+`movies.component.ts`: Componente Angular que consome o serviço e exibe os dados dos filmes.
 
-movies.component.html: Template para exibir a lista de filmes com imagens e informações relevantes.
+`movies.component.html`: Template para exibir a lista de filmes com imagens e informações relevantes.
 
 ## Exemplo de Código
 
-#Serviço para Consumo da API (tmdb.service.ts)
+#Serviço para Consumo da API (`tmdb.service.ts`)
 
 ```bash
 import { Injectable } from '@angular/core';
@@ -133,7 +128,7 @@ export class TmdbService {
 }
 ```
 
-# Template para Exibição de Filmes (movies.component.html)
+- Template para Exibição de Filmes (`browse.component.html`)
 
 ```bash
 <div class="bg-gray-900 p-8">
@@ -156,13 +151,13 @@ export class TmdbService {
 
 ## Personalização e Expansão
 
-Este projeto pode ser facilmente expandido para incluir novas funcionalidades, como:
+- Este projeto pode ser facilmente expandido para incluir novas funcionalidades, como:
 
-Pesquisa de Filmes: Adicionar um campo de pesquisa para buscar filmes específicos na API do TMDB.
+- Pesquisa de Filmes: Adicionar um campo de pesquisa para buscar filmes específicos na API do TMDB.
 
-Filtros por Gênero ou Ano: Implementar filtros para exibir filmes por gênero ou ano de lançamento.
+- Filtros por Gênero ou Ano: Implementar filtros para exibir filmes por gênero ou ano de lançamento.
 
-Detalhes do Filme: Criar uma página de detalhes para cada filme, com informações adicionais.
+- Detalhes do Filme: Criar uma página de detalhes para cada filme, com informações adicionais.
 
 ## Contribuições
 
@@ -171,3 +166,5 @@ Este é um projeto de aprendizado, e contribuições são bem-vindas! Sinta-se �
 ## Licença
 
 Este projeto é apenas para fins educativos e acadêmicos. Consulte a documentação da API do TMDB para verificar as restrições de uso.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
