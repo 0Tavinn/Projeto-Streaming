@@ -68,6 +68,7 @@ No arquivo `tmdb.service.ts`, insira sua chave da API onde indicado:
 
 ```bash
 private apiKey = 'SUA_CHAVE_API';
+accessToken: 'SEU_TOKEN';
 ```
 
 4. Execute o servidor de desenvolvimento:
