@@ -56,61 +56,523 @@
     </div>
 </nav>
 
-<section class="bg-gray-700 p-8 text-center">
-    <div class="max-w-2xl mx-auto">
-        <p class="text-green-500 uppercase font-semibold mb-2">Novos Lançamentos</p>
-        <h1 class="text-4xl font-bold mb-4">nome do filme</h1>
-        <div class="flex justify-center space-x-4 mb-4">
-            <span>Avaliação IMDB: 5.4</span>
-            <span>2020</span>
-            <span>4K ULTRA HD</span>
-            <span>Romance, Ação</span>
-        </div>
-        <p class="mb-6">Estrutura da historia</p>
-        <div class="flex justify-center space-x-4">
-            <button class="px-4 py-2 bg-green-700 text-white font-semibold rounded">Assistir Trailer</button>
-            <button class="px-4 py-2 bg-gray-800 text-white font-semibold rounded">Adicionar à Lista de Assistir</button>
-        </div>
+<section class="relative h-[500px] bg-black text-white">
+    <!-- Background Image -->
+    <div *ngIf="filmeDiverti" class="absolute inset-0">
+      <img
+        src="https://s2-techtudo.glbimg.com/BZAsu9yLJHp2RX2Wkd0ZJtnCF18=/0x0:1332x883/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/A/a/c0ONndQtaQXV8vcGe1Cg/nope-1.jpg"
+        alt="Background"
+        class="w-full h-full object-cover opacity-50"
+      />
     </div>
-</section>
+  
+
+    <!-- Content Overlay -->
+    <div class="relative h-full flex flex-col justify-center items-center text-center px-6 z-10 ">
+      <!-- Play Button -->
+      <button
+        class="flex items-center space-x-2 bg-gray-800 hover:bg-green-700 px-4 py-2 rounded-full text-lg font-semibold transition-colors duration-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+          />
+        </svg>
+        <span>Assista</span>
+      </button>
+  
+      <!-- Title -->
+      <h1 class="mt-6 text-4xl font-bold uppercase">Novidades</h1>
+  
+      <!-- Metadata -->
+      <div class="mt-4 text-sm flex items-center justify-center space-x-4 text-gray-400">
+        <span>2 weeks</span>
+        <span class="text-green-500">• Animation •</span>
+        <div class="flex items-center space-x-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 9V5.25a3.75 3.75 0 00-7.5 0V9m-4.5 0h16.5M12 15.75v6.75M9 18l3 3 3-3"
+            />
+          </svg>
+          <span>14300 Views</span>
+        </div>
+      </div>
+  
+      <!-- Description -->
+      <p class="mt-4 text-gray-300 max-w-2xl">
+        Depois da trágica morte de seu pai, o treinador de animais para produções de Hollywood, OJ, e sua irmã, Emerald, começam a ver fenômenos inexplicáveis em seu vasto rancho no sul da Califórnia, que leva eles por um caminho obsessivo enquanto tentam captar o mistério em filme.
+      </p>
+    </div>
+  
+    <!-- Navigation Arrows -->
+    <button class="absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 w-10 h-10 flex items-center justify-center rounded-full z-20">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5"
+        />
+      </svg>
+    </button>
+  
+    <button class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 w-10 h-10 flex items-center justify-center rounded-full z-20">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5L15.75 12l-7.5 7.5"
+        />
+      </svg>
+    </button>
+  </section>
+
+  <section class="dark:bg-gray-900 py-12">
+    <!-- Título -->
+    <div class="text-center mb-10">
+      <p class="text-green-500 uppercase tracking-wide">Para voçê</p>
+    </div>
+  
+    <!-- Grid de Cartões -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 lg:px-12">
+      <!-- Cartão 1 -->
+      <div *ngIf="filmeVenom" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeVenom.poster_path)" 
+          alt="{{ filmeVenom.title }}" 
+          class="w-80  object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        
+        <!-- Sobreposição e Informações -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <!-- Botão de Play -->
+          <button 
+            class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke-width="2" 
+              stroke="currentColor" 
+              class="w-5 h-5"
+            >
+              <path 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+      
+          <!-- Título e Data -->
+          <h3 class="text-lg font-bold">{{ filmeVenom.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeVenom.release_date | date }}</p>
+        </div>
+      </div>
+      
+  
+      <!-- Cartão 2 -->
+      <div *ngIf="filmeJohn4" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeJohn4.poster_path)" 
+          alt="{{ filmeJohn4.title }}" 
+          class="w-80 object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <button class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+          <h3 class="text-lg font-bold">{{ filmeJohn4.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeJohn4.release_date | date }}</p>
+        </div>
+      </div>
+  
+      <!-- Cartão 3 -->
+      <div *ngIf="filmeWicked" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeWicked.poster_path)" 
+          alt="{{ filmeWicked.title }}" 
+          class="w-80  object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <button class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+          <h3 class="text-lg font-bold">{{ filmeWicked.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeWicked.release_date | date }}</p>
+        </div>
+      </div>
+  
+      <!-- Cartão 4 -->
+      <div *ngIf="filmeSorria2" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeSorria2.poster_path)" 
+          alt="{{ filmeSorria2.title }}" 
+          class="w-80  object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <button class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+          <h3 class="text-lg font-bold">{{ filmeSorria2.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeSorria2.release_date | date }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  
+  <section class="dark:bg-gray-900 py-12">
+    <!-- Título -->
+    <div class="text-center mb-10">
+      <p class="text-green-500 uppercase tracking-wide">Infantil</p>
+    </div>
+  
+    <!-- Grid de Cartões -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 lg:px-12">
+      <!-- Cartão 1 -->
+      <div *ngIf="filmeMeuMal" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeMeuMal.poster_path)" 
+          alt="{{ filmeMeuMal.title }}" 
+          class="w-80  object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        
+        <!-- Sobreposição e Informações -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <!-- Botão de Play -->
+          <button 
+            class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke-width="2" 
+              stroke="currentColor" 
+              class="w-5 h-5"
+            >
+              <path 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+      
+          <!-- Título e Data -->
+          <h3 class="text-lg font-bold">{{ filmeMeuMal.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeMeuMal.release_date | date }}</p>
+        </div>
+      </div>
+      
+  
+      <!-- Cartão 2 -->
+      <div *ngIf="filmeGarfild" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeGarfild.poster_path)" 
+          alt="{{ filmeGarfild.title }}" 
+          class="w-80 object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <button class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+          <h3 class="text-lg font-bold">{{ filmeGarfild.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeGarfild.release_date | date }}</p>
+        </div>
+      </div>
+  
+      <!-- Cartão 3 -->
+      <div *ngIf="filmeMoana2" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeMoana2.poster_path)" 
+          alt="{{ filmeMoana2.title }}" 
+          class="w-80  object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <button class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+          <h3 class="text-lg font-bold">{{ filmeMoana2.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeMoana2.release_date | date }}</p>
+        </div>
+      </div>
+  
+      <!-- Cartão 4 -->
+      <div *ngIf="filmeDiverti" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeDiverti.poster_path)" 
+          alt="{{ filmeDiverti.title }}" 
+          class="w-80  object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <button class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+          <h3 class="text-lg font-bold">{{ filmeDiverti.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeDiverti.release_date | date }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
 
 <!-- Seção de Streaming -->
-<section class="bg-gray-800 p-8">
-    <h2 class="text-center text-2xl font-bold mb-6">Assista Shows Online</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Itens de Exemplo -->
-        <div class="bg-gray-700 p-4 text-center rounded">
-            <h3 class="font-semibold">Pensando em Você</h3>
-            <p>Temporada 1 - 2020</p>
-        </div>
-        <div class="bg-gray-700 p-4 text-center rounded">
-            <h3 class="font-semibold">Guerra Civil</h3>
-            <p>Temporada 2 - 2020</p>
-        </div>
-        <div class="bg-gray-700 p-4 text-center rounded">
-            <h3 class="font-semibold">Melhor Jogo</h3>
-            <p>Temporada 5 - 2020</p>
-        </div>
-        <div class="bg-gray-700 p-4 text-center rounded">
-            <h3 class="font-semibold">Antoshka</h3>
-            <p>Temporada 8 - 2020</p>
-        </div>
+<section class="dark:bg-gray-900 py-12">
+    <!-- Título -->
+    <div class="text-center mb-10">
+      <p class="text-green-500 uppercase tracking-wide">Outros</p>
     </div>
-</section>
+  
+    <!-- Grid de Cartões -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 lg:px-12">
+      <!-- Cartão 1 -->
+      <div *ngIf="filmeGLadiadorII" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeGLadiadorII.poster_path)" 
+          alt="{{ filmeGLadiadorII.title }}" 
+          class="w-80  object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        
+        <!-- Sobreposição e Informações -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <!-- Botão de Play -->
+          <button 
+            class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke-width="2" 
+              stroke="currentColor" 
+              class="w-5 h-5"
+            >
+              <path 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+      
+          <!-- Título e Data -->
+          <h3 class="text-lg font-bold">{{ filmeGLadiadorII.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeGLadiadorII.release_date | date }}</p>
+        </div>
+      </div>
+      
+  
+      <!-- Cartão 2 -->
+      <div *ngIf="filmePantera" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmePantera.poster_path)" 
+          alt="{{ filmePantera.title }}" 
+          class="w-80 object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <button class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+          <h3 class="text-lg font-bold">{{ filmePantera.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmePantera.release_date | date }}</p>
+        </div>
+      </div>
+  
+      <!-- Cartão 3 -->
+      <div *ngIf="filmeAlien" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeAlien.poster_path)" 
+          alt="{{ filmeAlien.title }}" 
+          class="w-80  object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <button class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+          <h3 class="text-lg font-bold">{{ filmeAlien.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeAlien.release_date | date }}</p>
+        </div>
+      </div>
+  
+      <!-- Cartão 4 -->
+      <div *ngIf="filmeSubst" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
+        <!-- Imagem de Fundo -->
+        <img 
+          [src]="getImageUrl(filmeSubst.poster_path)" 
+          alt="{{ filmeSubst.title }}" 
+          class="w-80  object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <button class="bg-white text-black rounded-full w-10 h-10 mb-2 flex items-center justify-center shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+              />
+            </svg>
+          </button>
+          <h3 class="text-lg font-bold">{{ filmeSubst.title }}</h3>
+          <p class="text-sm text-gray-300">{{ filmeSubst.release_date | date }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Seção de Recomendações -->
-<section class="bg-gray-900 p-8">
-    <h2 class="text-center text-2xl font-bold mb-6">Filmes Para Você</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Itens de Exemplo -->
-        <div class="bg-gray-800 p-4 text-center rounded">
-            <h3 class="font-semibold">Pantera Negra</h3>
-            <p>190 min, Romance, PG-13</p>
-        </div>
-        <div class="bg-gray-800 p-4 text-center rounded">
-            <h3 class="font-semibold">Ce Of Entro</h3>
-            <p>190 min, Romance, PG-13</p>
-        </div>
-        <!-- Adicione mais filmes conforme necessário -->
-    </div>
-</section>
