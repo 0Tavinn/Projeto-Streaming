@@ -155,6 +155,10 @@ Este projeto pode ser facilmente expandido para incluir novas funcionalidades, c
 
 - Detalhes do Filme: Criar uma página de detalhes para cada filme, com informações adicionais.
 
+## Demonstração
+
+![Captura de tela 2024-11-21 145246](https://github.com/user-attachments/assets/8122472d-4ba0-4924-8905-a098d3ed7e35)
+
 ## Contribuições
 
 Este é um projeto de aprendizado, e contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests para aprimorar a funcionalidade e corrigir bugs.
