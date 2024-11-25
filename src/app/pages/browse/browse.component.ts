@@ -26,7 +26,8 @@ export class BrowseComponent {
   filmeDiverti : any;
   filmeOperacao : any;
   filmeAlien : any;
-  filmeSubst : any
+  filmeSubst : any;
+  filmeNao : any
 
 
   IMAGE_BASE_URL = "https://image.tmdb.org/t/p/";
@@ -51,7 +52,8 @@ export class BrowseComponent {
     const idFilmeDiverti = 1022789;
     const idFilmeOperacao = 845781;
     const idFilmeAlien = 945961;
-    const idFilmeSubst = 933260
+    const idFilmeSubst = 933260;
+    const idFilmeNao = 762504
 
 
     // Carregar o Pantera Negra
@@ -117,6 +119,10 @@ export class BrowseComponent {
     this.filmeService.getMovieById(idFilmeSubst).subscribe((result:any) => {
       console.log(result);
       this.filmeSubst = result;
+    });
+    this.filmeService.getMovieById(idFilmeNao).subscribe((result:any) => {
+      console.log(result);
+      this.filmeNao = result;
     })
   }
 
