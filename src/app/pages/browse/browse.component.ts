@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Importando o CommonModule
 import { ApiFilmesService } from '../servicos/api-filmes.service'; // Seu serviço para buscar os filmes
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-browse',
@@ -129,5 +130,14 @@ export class BrowseComponent {
   // Função para criar a URL completa das imagens
   getImageUrl(path: string): string {
     return `${this.IMAGE_BASE_URL}${this.IMAGE_SIZE}${path}`;
+  }
+
+  constructor(private router: Router) {}
+
+  onBrowse(): void {
+    this.router.navigate(['/sinopse']);
+  }
+  onBrowse1(): void {
+    this.router.navigate(['/dinner']);
   }
 }

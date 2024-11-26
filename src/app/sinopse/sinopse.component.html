@@ -1,0 +1,42 @@
+
+<body class="bg-gray-900 text-white h-screen flex items-center justify-center">
+  <!-- Contêiner centralizado -->
+  <div class="bg-gray-800 rounded-lg shadow-2xl w-11/12 max-w-4xl p-6">
+    <!-- Título e Poster -->
+    <div class="flex flex-col md:flex-row items-start md:items-center md:space-x-8">
+      <!-- Imagem do Poster -->
+      <div class="flex-shrink-0 w-full md:w-1/3">
+        <img src="https://media.themoviedb.org/t/p/w300_and_h450_bestv2/fTGJWXuFDcRSIVPgQLbxziGquOC.jpg" alt="Título do Filme" class="rounded-lg shadow-lg">
+      </div>
+
+      <!-- Informações do Filme -->
+      <div class="mt-6 md:mt-0 md:w-2/3">
+        <h1 class="text-4xl font-bold mb-2">Venom: A Última Rodada (2024)</h1>
+        <div class="text-green-400 text-lg font-semibold mb-4">Ficção científica, Ação, Aventura
+        </div>
+        <div class="flex items-center space-x-4 mb-4">
+          <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">14+</span>
+          <div class="flex items-center text-yellow-400">
+            <span class="text-2xl font-bold">65%</span>
+            <span class="ml-2">Avaliação dos Usuários</span>
+          </div>
+        </div>
+        <p class="text-gray-400 italic">"A caçada começou."</p>
+        <h2 class="text-2xl font-semibold mt-4">Sinopse</h2>
+        <p class="mt-2 text-gray-300">
+          Eddie e Venom estão fugindo. Perseguidos pelos dois mundos, a dupla é forçada a tomar uma decisão devastadora que vai fechar as cortinas da última rodada de Venom e Eddie.
+        </p>
+        <div class="mt-4">
+          <span class="text-gray-400">Criação: </span>
+          <span class="text-white font-semibold">Kelly Marcel, Tom Hardy, David Michelinie.</span>
+        </div>
+        <!-- Botões -->
+        <div class="mt-6 flex space-x-4">
+          <a  (click)="onSinopse()" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg shadow-lg">Assista Agora</a>
+          <a href="https://www.themoviedb.org/video/play?key=CaVpgcLlhxo" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg shadow-lg">Reproduzir Trailer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

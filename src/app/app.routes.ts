@@ -5,6 +5,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import path from 'node:path';
 import { DinnerComponent } from './pages/dinner/dinner.component';
 import { PasswordComponent } from './pages/password/password.component';
+import { SinopseComponent } from './sinopse/sinopse.component';
 
 
 export const routes: Routes = [
@@ -27,6 +28,10 @@ export const routes: Routes = [
     { 
         path:"password",
         component:PasswordComponent
+    },
+    {
+        path:"sinopse",
+        component:SinopseComponent
     },
     {
         path:"**",

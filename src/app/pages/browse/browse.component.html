@@ -87,7 +87,7 @@
             d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
           />
         </svg>
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeNao.id" target="_blank">
+        <a (click)="onBrowse1()">
         <span>Assista</span>
         </a>
       </button>
@@ -171,7 +171,7 @@
       <!-- Cartão 1 -->
       <div *ngIf="filmeVenom"  class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeVenom.id" target="_blank">
+        <a (click)="onBrowse()">
         <img 
           [src]="getImageUrl(filmeVenom.poster_path)" 
           alt="{{ filmeVenom.title }}" 
@@ -211,7 +211,7 @@
       <!-- Cartão 2 -->
       <div *ngIf="filmeJohn4" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeJohn4.id" target="_blank">
+        <a (click)="onBrowse1()">
         <img 
           [src]="getImageUrl(filmeJohn4.poster_path)" 
           alt="{{ filmeJohn4.title }}" 
@@ -243,7 +243,7 @@
       <!-- Cartão 3 -->
       <div *ngIf="filmeWicked" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeWicked.id" target="_blank">
+        <a (click)="onBrowse1()">
         <img 
           [src]="getImageUrl(filmeWicked.poster_path)" 
           alt="{{ filmeWicked.title }}" 
@@ -275,7 +275,7 @@
       <!-- Cartão 4 -->
       <div *ngIf="filmeSorria2" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeSorria2.id" target="_blank">
+        <a (click)="onBrowse1()">
         <img 
           [src]="getImageUrl(filmeSorria2.poster_path)" 
           alt="{{ filmeSorria2.title }}" 
@@ -359,7 +359,7 @@
       <!-- Cartão 2 -->
       <div *ngIf="filmeGarfild" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeGarfild.id" target="_blank">
+        <a (click)="onBrowse1()">
         <img 
           [src]="getImageUrl(filmeGarfild.poster_path)" 
           alt="{{ filmeGarfild.title }}" 
@@ -391,7 +391,7 @@
       <!-- Cartão 3 -->
       <div *ngIf="filmeMoana2" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeMoana2.id" target="_blank">
+        <a (click)="onBrowse1()">
         <img 
           [src]="getImageUrl(filmeMoana2.poster_path)" 
           alt="{{ filmeMoana2.title }}" 
@@ -423,7 +423,7 @@
       <!-- Cartão 4 -->
       <div *ngIf="filmeDiverti" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeDiverti.id" target="_blank">
+        <a (click)="onBrowse1()">
         <img 
           [src]="getImageUrl(filmeDiverti.poster_path)" 
           alt="{{ filmeDiverti.title }}" 
@@ -467,7 +467,7 @@
       <!-- Cartão 1 -->
       <div *ngIf="filmeGLadiadorII" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeGLadiadorII.id" target="_blank">
+        <a (click)="onBrowse1()">
         <img 
           [src]="getImageUrl(filmeGLadiadorII.poster_path)" 
           alt="{{ filmeGLadiadorII.title }}" 
@@ -507,7 +507,7 @@
       <!-- Cartão 2 -->
       <div *ngIf="filmePantera" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmePantera.id" target="_blank">
+        <a (click)="onBrowse1()">
         <img 
           [src]="getImageUrl(filmePantera.poster_path)" 
           alt="{{ filmePantera.title }}" 
@@ -539,7 +539,7 @@
       <!-- Cartão 3 -->
       <div *ngIf="filmeAlien" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeAlien.id" target="_blank">
+        <a (click)="onBrowse1()">
         <img 
           [src]="getImageUrl(filmeAlien.poster_path)" 
           alt="{{ filmeAlien.title }}" 
@@ -571,7 +571,7 @@
       <!-- Cartão 4 -->
       <div *ngIf="filmeSubst" class="relative group bg-black text-white rounded-lg overflow-hidden shadow-md">
         <!-- Imagem de Fundo -->
-        <a [href]="'https://www.themoviedb.org/movie/' + filmeSubst.id" target="_blank">
+        <a (click)="onBrowse1()">
         <img 
           [src]="getImageUrl(filmeSubst.poster_path)" 
           alt="{{ filmeSubst.title }}" 
