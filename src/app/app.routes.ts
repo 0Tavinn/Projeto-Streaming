@@ -6,6 +6,7 @@ import path from 'node:path';
 import { DinnerComponent } from './pages/dinner/dinner.component';
 import { PasswordComponent } from './pages/password/password.component';
 import { SinopseComponent } from './sinopse/sinopse.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 export const routes: Routes = [
@@ -34,7 +35,11 @@ export const routes: Routes = [
         component:SinopseComponent
     },
     {
+        path:"inicio",
+        component:InicioComponent
+    },
+    {
         path:"**",
-        redirectTo:"dinner"
+        redirectTo:"inicio"
     },
 ];
