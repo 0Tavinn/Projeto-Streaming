@@ -1,5 +1,6 @@
 create database login;
-CREATE USER 'user'@'%' IDENTIFIED BY 'user';
+-- CREATE USER 'user'@'%' IDENTIFIED BY 'user';
+create user 'user'@'%' identified with mysql_native_password by 'user';
 GRANT ALL PRIVILEGES ON login.* TO 'user'@'%';
 use login;
 CREATE TABLE login.usuario (
